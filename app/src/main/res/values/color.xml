@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="primary">#E7494A</color>
+    <color name="primaryDark">#cf4142</color>
+    <color name="primary_back">#80E7494A</color>
+    <color name="accent">#eeff41</color>
+    <color name="accentLight">#F4FF81</color>
+    <color name="activity_background">#F5F6F8</color>
+    <color name="menu_text_color">#56565D</color>
+    <color name="transp">#80000000</color>
+</resources>

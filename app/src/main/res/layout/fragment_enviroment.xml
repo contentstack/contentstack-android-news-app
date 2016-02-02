@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_centerHorizontal="true"
+        android:weightSum="2">
+
+        <android.support.v4.widget.SwipeRefreshLayout
+            android:id="@+id/swipeView"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1.2"
+            android:visibility="visible">
+            <LinearLayout
+                android:id="@+id/selectContainer"
+                android:orientation="vertical"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/primary_back">
+
+                <android.support.v4.view.ViewPager
+                    android:id="@+id/topNewsViewPager"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content" />
+
+            </LinearLayout>
+        </android.support.v4.widget.SwipeRefreshLayout>
+
+        <LinearLayout
+            android:orientation="vertical"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="0.8">
+
+            <TextView
+                android:id="@+id/top_news_text"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="14sp"
+                android:textColor="@android:color/black"
+                android:textStyle="normal"
+                android:padding="5dp"
+                android:visibility="invisible" />
+
+            <View
+                android:id="@+id/top_news_separator"
+                android:layout_width="wrap_content"
+                android:layout_height="1dp"
+                android:background="@android:color/black"
+                android:layout_marginLeft="5dp"
+                android:layout_marginRight="10dp"
+                android:textStyle="normal"
+                android:padding="5dp"
+                android:visibility="invisible" />
+
+            <com.raweng.contentstackapplication.thirdpartyutils.ProgressBarCircularIndeterminate
+                android:id="@+id/progress"
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:gravity="center_horizontal|center_vertical"
+                android:layout_gravity="center"
+                android:visibility="gone"/>
+
+            <android.support.v7.widget.RecyclerView
+                android:id="@+id/recyclerView"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:padding="15dp"
+                android:layout_marginTop="3dp" />
+        </LinearLayout>
+    </LinearLayout>
+
+
+</LinearLayout>

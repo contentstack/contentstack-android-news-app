@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/primary_back">
+    <ProgressBar
+        android:id="@+id/topNewsProgress"
+        android:layout_width="30dp"
+        android:layout_height="30dp"
+        android:layout_centerInParent="true"/>
+
+    <ImageView
+        android:id="@+id/topNewsBanner"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:scaleType="centerCrop"/>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:background="@drawable/gradient">
+
+        <TextView
+            android:id="@+id/topNewsTitle"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/top_news_tilte"
+            android:textColor="@android:color/white"
+            android:textStyle="normal"
+            android:editable="false"
+            android:padding="10dp"
+            android:textSize="18sp" />
+
+        <TextView
+            android:id="@+id/topNewsCategoryTimeText"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/categories"
+            android:textSize="12sp"
+            android:textStyle="normal"
+            android:singleLine="true"
+            android:paddingLeft="10dp"
+            android:paddingBottom="10dp"
+            android:editable="false"
+            android:textColor="@android:color/white"
+            android:layout_below="@id/topNewsTitle" />
+    </RelativeLayout>
+
+
+</RelativeLayout>
