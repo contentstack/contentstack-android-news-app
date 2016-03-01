@@ -68,7 +68,7 @@ For more details about Query, refer [Contentstack Query Guide][5]
 
 
   [1]: https://api.contentstack.io/v2/assets/566ad5bd24349fdd77167988/download?uid=blte3fa016ec4c2af0b&AUTHTOKEN=bltefb4f32b56206d8e5bc6cb9e
-  [2]: https://api.contentstack.io/v2/assets/56b85f310ea5e91f35d9ffbb/download?uid=blt0ef50bfc28445d08?AUTHTOKEN=bltf921dacdd808e2b6cf4150ac
+  [2]: https://api.contentstack.io/v2/assets/56b85f310ea5e91f35d9ffbb/download?uid=blt0ef50bfc28445d08&AUTHTOKEN=bltbfb694c915ad7c3b24584a7b
   [3]: https://api.contentstack.io/v1/uploads/56b85f390ea5e91f35d9ffc6/download?uid=blt04d8d8e7c7c632c5&AUTHTOKEN=bltefb4f32b56206d8e5bc6cb9e
   [4]: http://contentstackandroidsdk.builtapp.io/cs_android_quickstart.zip
   [5]:http://csdocs.builtapp.io/developer/android/query-guide
