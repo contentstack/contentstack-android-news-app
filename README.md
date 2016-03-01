@@ -1,9 +1,6 @@
 # NewsApp-Android
 Sample News app showing use of Contentstack SDK.
 
-## Introduction
-Sample News application
-
 ![Screen1][1]
 
 ## Content Modelling in Contentstack (Content Type)
@@ -17,11 +14,12 @@ Create **News** Content Type
 
 ![News_CT][3]
 
-## Download Blank Android Project
+## Clone repository
 
-Built.io Contentstack provides a blank project with all the settings pre-configured in it. This project also contains the Android SDK, so you need not download it separately. You simply need to [download the project][4] and import it in Android Studio/Eclipse.
+Open Terminal (for Mac and Linux users) or the command prompt (for Windows users) and paste the below command to clone the project.
 
-**Note: Before saving this project to your system, make sure you rename it as per your requirement.** 
+    $ git clone https://github.com/raweng/NewsApp-Android.git
+
 
 ##  Usage
 ##### SDK Initialization
@@ -70,7 +68,7 @@ For more details about Query, refer [Contentstack Query Guide][5]
 
 
   [1]: https://api.contentstack.io/v2/assets/566ad5bd24349fdd77167988/download?uid=blte3fa016ec4c2af0b&AUTHTOKEN=bltefb4f32b56206d8e5bc6cb9e
-  [2]: https://api.contentstack.io/v1/uploads/56b85f310ea5e91f35d9ffbb/download?uid=blt0ef50bfc28445d08&AUTHTOKEN=bltefb4f32b56206d8e5bc6cb9e
+  [2]: https://api.contentstack.io/v2/assets/56b85f310ea5e91f35d9ffbb/download?uid=blt0ef50bfc28445d08?AUTHTOKEN=bltf921dacdd808e2b6cf4150ac
   [3]: https://api.contentstack.io/v1/uploads/56b85f390ea5e91f35d9ffc6/download?uid=blt04d8d8e7c7c632c5&AUTHTOKEN=bltefb4f32b56206d8e5bc6cb9e
   [4]: http://contentstackandroidsdk.builtapp.io/cs_android_quickstart.zip
   [5]:http://csdocs.builtapp.io/developer/android/query-guide
