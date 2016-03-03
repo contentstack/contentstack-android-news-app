@@ -5,9 +5,10 @@ Sample News app showing use of Contentstack SDK.
 
 ## Content Modelling in Contentstack (Content Type)
 In this news application, we will create 2 Content Types viz., Category and News. Let's see how to create it in Contentstack. Download the JSON format of Category and News content type and import it in Contentstack.
-![Category JSON](https://www.dropbox.com/s/p8ybnoa3cqz3nki/category.json?dl=0), ![News JSON](https://www.dropbox.com/s/c7ls6xee87hwa0b/news.json?dl=0).
+[Category JSON](https://www.dropbox.com/s/p8ybnoa3cqz3nki/category.json?dl=0),
+[News JSON](https://www.dropbox.com/s/c7ls6xee87hwa0b/news.json?dl=0).
 
-To learn more about how to import content type, check out the guide.
+To learn more about how to import content type, check out the [guide](http://contentstackdocs.built.io/developer/guides/content-types#import-a-content-type).
 
 Create **Category** Content Type
 
