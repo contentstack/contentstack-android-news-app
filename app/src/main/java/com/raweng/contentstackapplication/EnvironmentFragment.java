@@ -137,7 +137,7 @@ public class EnvironmentFragment extends Fragment {
         Query query = ContentApplication.getStackInstance().contentType("news").query();
 
         query = AppSharedPreferences.getLocale(getActivity()).equals(Language.ENGLISH_UNITED_STATES.name()) ? query.language(Language.ENGLISH_UNITED_STATES) : query.language(Language.HINDI_INDIA);
-        query = (categoryUid == null || categoryUid.equalsIgnoreCase(getString(R.string.top_news)) || categoryUid.equalsIgnoreCase(getString(R.string.top_news_hindi))) ? query.where("top_news", true) : query.where("category", categoryUid);
+        query = (categoryUid == null || categoryUid.equalsIgnoreCase(getString(R.string.top_news)) || categoryUid.equalsIgnoreCase(getString(R.string.top_news_hindi))) ? query.where("topnews", true) : query.where("category", categoryUid);
 
         query.includeReference("category");
         query.ascending("updated_at");
@@ -170,7 +170,7 @@ public class EnvironmentFragment extends Fragment {
                                     categoriesEntries.add(entry);
                                 }
 
-                                if (categoryUid.equalsIgnoreCase(uidJSON.optJSONObject("_metadata").optString("uid")) && entry.getBoolean("top_news")) {
+                                if (categoryUid.equalsIgnoreCase(uidJSON.optJSONObject("_metadata").optString("uid")) && entry.getBoolean("topnews")) {
                                     topEntries.add(entry);
                                 }
                             }

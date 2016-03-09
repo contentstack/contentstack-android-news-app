@@ -12,7 +12,6 @@ public class ContentApplication extends Application {
 
     static Stack stack;
 
-
     @Override
     public void onCreate() {
         super.onCreate();
