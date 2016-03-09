@@ -156,7 +156,7 @@ public class EnvironmentFragment extends Fragment {
                         if (jsonArray != null && jsonArray.length() > 0) {
                             JSONObject uidJSON = jsonArray.optJSONObject(0);
 
-                            if ((categoryUid == null || categoryUid.equalsIgnoreCase(getString(R.string.top_news)) || categoryUid.equalsIgnoreCase(getString(R.string.top_news_hindi))) && entry.getBoolean("top_news")) {
+                            if ((categoryUid == null || categoryUid.equalsIgnoreCase(getString(R.string.top_news)) || categoryUid.equalsIgnoreCase(getString(R.string.top_news_hindi))) && entry.getBoolean("topnews")) {
                                 topEntries.add(entry);
                                 categoriesEntries.add(entry);
 
