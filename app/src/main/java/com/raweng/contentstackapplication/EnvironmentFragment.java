@@ -136,7 +136,7 @@ public class EnvironmentFragment extends Fragment {
         lockScreenOrientation();
         Query query = ContentApplication.getStackInstance().contentType("news").query();
 
-        query = AppSharedPreferences.getLocale(getActivity()).equals(Language.ENGLISH_UNITED_STATES.name()) ? query.locale(Language.ENGLISH_UNITED_STATES) : query.locale(Language.HINDI_INDIA);
+        query = AppSharedPreferences.getLocale(getActivity()).equals(Language.ENGLISH_UNITED_STATES.name()) ? query.language(Language.ENGLISH_UNITED_STATES) : query.language(Language.HINDI_INDIA);
         query = (categoryUid == null || categoryUid.equalsIgnoreCase(getString(R.string.top_news)) || categoryUid.equalsIgnoreCase(getString(R.string.top_news_hindi))) ? query.where("top_news", true) : query.where("category", categoryUid);
 
         query.includeReference("category");

@@ -147,9 +147,9 @@ public class ContentActivity extends AppCompatActivity implements NavigationDraw
             Query query = ContentApplication.getStackInstance().contentType("category").query();
 
             if (AppSharedPreferences.getLocale(ContentActivity.this).equals(com.builtio.contentstack.Language.ENGLISH_UNITED_STATES.name())) {
-                query.locale(com.builtio.contentstack.Language.ENGLISH_UNITED_STATES);
+                query.language(com.builtio.contentstack.Language.ENGLISH_UNITED_STATES);
             } else {
-                query.locale(com.builtio.contentstack.Language.HINDI_INDIA);
+                query.language(com.builtio.contentstack.Language.HINDI_INDIA);
             }
 
             query.find(new QueryResultsCallBack() {
