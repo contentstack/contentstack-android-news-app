@@ -72,4 +72,4 @@ For more details about Query, refer [Contentstack Query Guide][5]
         //For Hindi language
         query.language(Language.HINDI_INDIA.name())
     
-  [5]: http://csdocs.builtapp.io/developer/android/query-guide
+  [5]: http://contentstackdocs.built.io/developer/android/query-guide
