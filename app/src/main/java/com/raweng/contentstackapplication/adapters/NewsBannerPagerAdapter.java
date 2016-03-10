@@ -59,7 +59,7 @@ public class NewsBannerPagerAdapter extends PagerAdapter {
         final SimpleDateFormat format = new SimpleDateFormat("MMM dd, yyyy", Locale.ENGLISH);
         categoryTimeText.setText(categoryName + " | " + format.format(categoriesEntries.get(position).getCreateAt().getTime()));
 
-        if(categoriesEntries.get(position).getJSONObject("featured_image") != null) {
+        if(categoriesEntries.get(position).getJSONObject("banner") != null) {
             BitmapAjaxCallback ajaxCallback = new BitmapAjaxCallback() {
 
                 @Override
@@ -77,7 +77,7 @@ public class NewsBannerPagerAdapter extends PagerAdapter {
             ajaxCallback.header("Authtoken", ContentApplication.CONTENTSTACK_ACCESS_TOKEN);
 
 
-            ajaxCallback.url(categoriesEntries.get(position).getJSONObject("featured_image").optString("url"));
+            ajaxCallback.url(categoriesEntries.get(position).getJSONObject("banner").optString("url"));
 
             ajaxCallback.memCache(true);
             ajaxCallback.fileCache(true);
@@ -103,8 +103,8 @@ public class NewsBannerPagerAdapter extends PagerAdapter {
                 newsDetailsIntent.putExtra("description", categoriesEntries.get(position).getString("body"));
                 newsDetailsIntent.putExtra("creationTime", format.format(categoriesEntries.get(position).getCreateAt().getTime()));
 
-                if (categoriesEntries.get(position).getJSONObject("featured_image").optString("url") != null) {
-                    newsDetailsIntent.putExtra("url", categoriesEntries.get(position).getJSONObject("featured_image").optString("url"));
+                if (categoriesEntries.get(position).getJSONObject("banner").optString("url") != null) {
+                    newsDetailsIntent.putExtra("url", categoriesEntries.get(position).getJSONObject("banner").optString("url"));
                 }
                 context.startActivity(newsDetailsIntent);
 

@@ -71,8 +71,8 @@ public class EnvironmentRecyclerAdapter extends RecyclerView.Adapter<EnviromentV
                 newsDetailsIntent.putExtra("categoryName", entries.get(position).getJSONArray("category").optJSONObject(0).optString("title"));
                 newsDetailsIntent.putExtra("description", entries.get(position).getString("body"));
                 newsDetailsIntent.putExtra("creationTime", format.format(entries.get(position).getCreateAt().getTime()));
-                if (entries.get(position).getJSONObject("featured_image") != null && entries.get(position).getJSONObject("featured_image").optString("url") != null) {
-                    newsDetailsIntent.putExtra("url", entries.get(position).getJSONObject("featured_image").optString("url"));
+                if (entries.get(position).getJSONObject("banner") != null && entries.get(position).getJSONObject("banner").optString("url") != null) {
+                    newsDetailsIntent.putExtra("url", entries.get(position).getJSONObject("banner").optString("url"));
                 }
 
                 activity.startActivity(newsDetailsIntent);
