@@ -14,6 +14,7 @@ import com.androidquery.AQuery;
 import com.androidquery.callback.AjaxStatus;
 import com.androidquery.callback.BitmapAjaxCallback;
 import com.builtio.contentstack.Entry;
+import com.raweng.contentstackapplication.ContentApplication;
 import com.raweng.contentstackapplication.NewsDetailActivity;
 import com.raweng.contentstackapplication.R;
 import com.raweng.contentstackapplication.viewholder.EnviromentViewHolder;
@@ -95,8 +96,8 @@ public class EnvironmentRecyclerAdapter extends RecyclerView.Adapter<EnviromentV
             }
         };
 
-        ajaxCallback.header("site_api_key", "***REMOVED***");
-        ajaxCallback.header("Authtoken", "***REMOVED***");
+        ajaxCallback.header("site_api_key", ContentApplication.CONTENTSTACK_API_KEY);
+        ajaxCallback.header("Authtoken", ContentApplication.CONTENTSTACK_ACCESS_TOKEN);
 
         ajaxCallback.url(entries.get(position).getJSONObject("thumbnail").optString("url"));
         ajaxCallback.memCache(true);

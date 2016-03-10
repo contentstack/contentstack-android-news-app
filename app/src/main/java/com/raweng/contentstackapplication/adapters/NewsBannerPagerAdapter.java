@@ -19,6 +19,7 @@ import com.androidquery.AQuery;
 import com.androidquery.callback.AjaxStatus;
 import com.androidquery.callback.BitmapAjaxCallback;
 import com.builtio.contentstack.Entry;
+import com.raweng.contentstackapplication.ContentApplication;
 import com.raweng.contentstackapplication.NewsDetailActivity;
 import com.raweng.contentstackapplication.R;
 
@@ -72,8 +73,8 @@ public class NewsBannerPagerAdapter extends PagerAdapter {
                 }
             };
 
-            ajaxCallback.header("site_api_key", "***REMOVED***");
-            ajaxCallback.header("Authtoken", "***REMOVED***");
+            ajaxCallback.header("site_api_key", ContentApplication.CONTENTSTACK_API_KEY);
+            ajaxCallback.header("Authtoken", ContentApplication.CONTENTSTACK_ACCESS_TOKEN);
 
 
             ajaxCallback.url(categoriesEntries.get(position).getJSONObject("featured_image").optString("url"));

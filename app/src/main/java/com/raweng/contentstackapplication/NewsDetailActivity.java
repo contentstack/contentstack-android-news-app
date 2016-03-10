@@ -87,8 +87,8 @@ public class NewsDetailActivity extends AppCompatActivity {
                 }
             };
 
-            ajaxCallback.header("site_api_key", "***REMOVED***");
-            ajaxCallback.header("Authtoken", "***REMOVED***");
+            ajaxCallback.header("site_api_key", ContentApplication.CONTENTSTACK_API_KEY);
+            ajaxCallback.header("Authtoken", ContentApplication.CONTENTSTACK_ACCESS_TOKEN);
 
             ajaxCallback.url(url);
             ajaxCallback.memCache(true);
