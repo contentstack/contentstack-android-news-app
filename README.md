@@ -1,7 +1,7 @@
 # NewsApp-Android
 Sample News app showing use of Contentstack SDK.
 
-<img src='http://contentstackdocs.built.io/images/ios-screentshot-new.jpg' width='650' height='550'/>
+<img src='https://contentstackdocs.built.io/images/android_screenshot.jpg' width='650' height='550'/>
 
 ## Content Modelling in Contentstack (Content Type)
 In this news application, we will create 2 Content Types viz., Category and News. Download the JSON format of Category and News content type and import it in Contentstack.
@@ -32,7 +32,7 @@ Open Terminal (for Mac and Linux users) or the command prompt (for Windows users
 ##### SDK Initialization
 Grab API Key and Access Token from Contentstack management screen.
 
-        Stack stack = Contentstack.stack(context, "siteApiKey","accessToken","production");
+        Stack stack = Contentstack.stack(context, "API_KEY","ACCESS_TOKEN","ENVIRONMENT_NAME");
 
 ##### Query News Items
 Home page shows list of top news that we have created in Contentstack. Let’s see how to query Contentstack. 
