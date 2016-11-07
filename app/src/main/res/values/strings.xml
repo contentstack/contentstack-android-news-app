@@ -1,0 +1,25 @@
+<resources>
+    <string name="app_name">Stack News</string>
+
+    <string name="title_section1">Section 1</string>
+    <string name="title_section2">Section 2</string>
+    <string name="title_section3">Section 3</string>
+
+    <string name="navigation_drawer_open">Open navigation drawer</string>
+    <string name="navigation_drawer_close">Close navigation drawer</string>
+
+    <string name="action_example">Example action</string>
+
+    <string name="action_settings">Settings</string>
+    <string name="categories">Categories</string>
+    <string name="categories_hindi">"श्रेणियाँ"</string>
+    <string name="top_news_string">TOP NEWS</string>
+    <string name="date_formator">12-08-2015</string>
+    <string name="top_news_tilte">Techies want what money can\'t buy: to be certified smellier</string>
+    <string name="please_wait">Please wait...</string>
+    <string name="english">English (Default)</string>
+    <string name="hindi">हिंदी</string>
+    <string name="upcaret">&#xf0d8;</string>
+    <string name="top_news">Top News</string>
+    <string name="top_news_hindi">मुख्य समाचार</string>
+</resources>

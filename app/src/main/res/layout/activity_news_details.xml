@@ -1,0 +1,117 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@android:color/white">
+
+    <android.support.v7.widget.Toolbar
+        android:id="@+id/toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="?attr/colorPrimary"
+        android:minHeight="?attr/actionBarSize"
+        app:popupTheme="@style/Theme.AppCompat.Light.DarkActionBar"
+        app:theme="@style/Toolbar"
+        android:layout_gravity="center_horizontal|top" >
+
+        <TextView
+            android:id="@+id/toolbar_title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/app_name"
+            android:layout_gravity="center"
+            android:textColor="@android:color/white"
+            android:textStyle="bold|normal"
+            android:textSize="17sp" />
+
+        <ImageView
+            android:id="@+id/toolbar_back"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="left"
+            android:src="@drawable/ic_back"/>
+
+    </android.support.v7.widget.Toolbar>
+    <ScrollView
+        android:id="@+id/scrollView"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:scrollbars="vertical"
+        android:layout_below="@id/toolbar"
+        android:fillViewport="true">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <RelativeLayout
+                android:id="@+id/banner_container"
+                android:layout_width="match_parent"
+                android:layout_height="225dp"
+                android:background="@color/primary_back">
+
+                <ProgressBar
+                    android:id="@+id/newsDetailsProgress"
+                    android:layout_width="30dp"
+                    android:layout_height="30dp"
+                    android:layout_centerInParent="true"
+                    android:scaleType="centerCrop" />
+
+                <ImageView
+                    android:id="@+id/newsBanner"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:scaleType="centerCrop" />
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/gradient"
+                    android:layout_alignParentBottom="true">
+
+                    <TextView
+                        android:id="@+id/newsTitle"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="@string/top_news_tilte"
+                        android:textColor="@android:color/white"
+                        android:textStyle="normal"
+                        android:padding="10dp"
+                        android:textSize="18sp" />
+
+                    <TextView
+                        android:id="@+id/newsCategoryTimeText"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/categories"
+                        android:textSize="12sp"
+                        android:textStyle="normal"
+                        android:singleLine="true"
+                        android:paddingLeft="10dp"
+                        android:paddingBottom="10dp"
+                        android:editable="false"
+                        android:textColor="@android:color/white"
+                        android:layout_below="@id/newsTitle" />
+                </RelativeLayout>
+
+            </RelativeLayout>
+
+            <WebView
+                android:id="@+id/newsDetails"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_below="@id/banner_container"
+                android:text="@string/top_news_tilte"
+                android:textColor="@android:color/black"
+                android:textStyle="normal"
+                android:scrollbars="vertical"
+                android:focusable="false"
+                android:padding="10dp"
+                android:textSize="18sp" />
+        </RelativeLayout>
+
+    </ScrollView>
+
+
+</RelativeLayout>
