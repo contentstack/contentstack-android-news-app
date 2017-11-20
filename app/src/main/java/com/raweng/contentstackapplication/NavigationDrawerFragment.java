@@ -34,25 +34,18 @@ import java.util.ArrayList;
 public class NavigationDrawerFragment extends Fragment {
 
     private static final String STATE_SELECTED_POSITION = "selected_navigation_drawer_position";
-
     private static final String PREF_USER_LEARNED_DRAWER = "navigation_drawer_learned";
-
     private NavigationDrawerCallbacks mCallbacks;
-
     private android.support.v7.app.ActionBarDrawerToggle mDrawerToggle;
     private DrawerLayout mDrawerLayout;
     private ListView mDrawerListView;
     private View mFragmentContainerView;
-
     private int mCurrentSelectedPosition = 0;
     private boolean mFromSavedInstanceState;
     private boolean mUserLearnedDrawer;
-
     public CategoriesAdapter categoriesAdapter;
-
     public String[] categoriesList = new String[]{};
     private TextView mDrawerTextView;
-
     public NavigationDrawerFragment() {}
 
     @Override
@@ -146,8 +139,7 @@ public class NavigationDrawerFragment extends Fragment {
 
                 if (!mUserLearnedDrawer) {
                     mUserLearnedDrawer = true;
-                    SharedPreferences sp = PreferenceManager
-                            .getDefaultSharedPreferences(getActivity());
+                    SharedPreferences sp = PreferenceManager.getDefaultSharedPreferences(getActivity());
                     sp.edit().putBoolean(PREF_USER_LEARNED_DRAWER, true).apply();
                 }
 

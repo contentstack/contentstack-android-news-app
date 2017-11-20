@@ -42,23 +42,23 @@ import java.util.TimerTask;
  */
 public class EnvironmentFragment extends Fragment {
 
-    SwipeRefreshLayout refreshLayout;
-    RecyclerView recyclerView;
-    ViewPager viewPager;
-    TextView topNewsText;
+    private SwipeRefreshLayout              refreshLayout;
+    private RecyclerView                    recyclerView;
+    private ViewPager                       viewPager;
+    private TextView                        topNewsText;
 
-    NewsBannerPagerAdapter newsBannerPagerAdapter = null;
-    EnvironmentRecyclerAdapter recyclerAdapter;
-    protected RecyclerView.LayoutManager mLayoutManager;
-    private int scrollPosition    = 0;
+    private NewsBannerPagerAdapter          newsBannerPagerAdapter = null;
+    private EnvironmentRecyclerAdapter      recyclerAdapter;
+    protected RecyclerView.LayoutManager    mLayoutManager;
+    private int scrollPosition              = 0;
 
     Handler handler = new Handler();
     int currentPage = 0;
-    private Timer swipeTimer;
-    private Runnable Update;
-    private String category = null;
-    private String categoryUid = null;
-    private View sepretorView;
+    private Timer                           swipeTimer;
+    private Runnable                        Update;
+    private String                          category = null;
+    private String                          categoryUid = null;
+    private View                            sepretorView;
 
     private int topNewsSize = 0;
     private ProgressBarCircularIndeterminate indeterminate;

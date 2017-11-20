@@ -10,6 +10,7 @@ import android.support.v4.widget.DrawerLayout;
 import android.support.v7.app.ActionBar;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
+import android.util.Log;
 import android.view.Menu;
 import android.view.View;
 import android.view.Window;
@@ -37,13 +38,11 @@ import java.util.Locale;
 public class ContentActivity extends AppCompatActivity implements NavigationDrawerFragment.NavigationDrawerCallbacks {
 
     private NavigationDrawerFragment mNavigationDrawerFragment;
-
     private Context context                      = null;
     private CharSequence mTitle                  = null;
     public String[] categoriesList               = new String[]{};
     private boolean isMenusFetched               = false;
-    private EnvironmentFragment environmentFragment;
-
+    private EnvironmentFragment                    environmentFragment;
     private ImageView languageImageView          = null;
     private TextView  upcaretTextView            = null;
     private Toolbar toolbar                      = null;
@@ -55,7 +54,8 @@ public class ContentActivity extends AppCompatActivity implements NavigationDraw
         setContentView(R.layout.activity_content);
 
         if(AppSharedPreferences.getLocale(ContentActivity.this) == null){
-            AppSharedPreferences.setLocale(ContentActivity.this, com.builtio.contentstack.Language.ENGLISH_UNITED_STATES.name());
+            AppSharedPreferences.setLocale(ContentActivity.this,
+            com.builtio.contentstack.Language.ENGLISH_UNITED_STATES.name());
         }
 
         initialize();
@@ -164,6 +164,7 @@ public class ContentActivity extends AppCompatActivity implements NavigationDraw
 
                         for (int i = 0; i < entries.size(); i++) {
                             categoriesList[i + 1] = entries.get(i).getUid();
+                            Log.e("UID: ", entries.get(i).getUid());
                         }
 
                         mNavigationDrawerFragment.setUp(R.id.navigation_drawer, (DrawerLayout) findViewById(R.id.drawer_layout), toolbar, entries, categoriesList);

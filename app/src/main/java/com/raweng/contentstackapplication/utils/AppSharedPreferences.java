@@ -20,4 +20,6 @@ public class AppSharedPreferences {
         return prefs.getString("locale", null);
     }
 
+    public static final String FIREBASE_TOKEN = "FIREBASE_TOCKEN";
+
 }

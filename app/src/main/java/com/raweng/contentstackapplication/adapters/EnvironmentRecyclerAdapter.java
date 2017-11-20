@@ -26,7 +26,8 @@ import java.util.Locale;
 /***
  * Created by built.io.
  */
-public class EnvironmentRecyclerAdapter extends RecyclerView.Adapter<EnviromentViewHolder> {
+public class EnvironmentRecyclerAdapter
+        extends RecyclerView.Adapter<EnviromentViewHolder> {
 
     ArrayList<Entry> entries;
     Activity activity;

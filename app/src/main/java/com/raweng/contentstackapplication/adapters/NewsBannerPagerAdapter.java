@@ -8,6 +8,7 @@ import android.os.Parcelable;
 import android.support.v4.app.FragmentActivity;
 import android.support.v4.view.PagerAdapter;
 import android.support.v4.view.ViewPager;
+import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -21,6 +22,8 @@ import com.androidquery.callback.BitmapAjaxCallback;
 import com.builtio.contentstack.Entry;
 import com.raweng.contentstackapplication.NewsDetailActivity;
 import com.raweng.contentstackapplication.R;
+
+import org.json.JSONObject;
 
 import java.text.SimpleDateFormat;
 import java.util.ArrayList;
@@ -52,20 +55,17 @@ public class NewsBannerPagerAdapter extends PagerAdapter {
         TextView    categoryTimeText = (TextView) view.findViewById(R.id.topNewsCategoryTimeText);
 
         progressBar.getIndeterminateDrawable().setColorFilter(context.getResources().getColor(R.color.primaryDark), android.graphics.PorterDuff.Mode.MULTIPLY);
-
         String categoryName = categoriesEntries.get(position).getJSONArray("category").optJSONObject(0).optString("title");
-
         final SimpleDateFormat format = new SimpleDateFormat("MMM dd, yyyy", Locale.ENGLISH);
         categoryTimeText.setText(categoryName + " | " + format.format(categoriesEntries.get(position).getCreateAt().getTime()));
 
         if(categoriesEntries.get(position).getJSONObject("featured_image") != null) {
-            BitmapAjaxCallback ajaxCallback = new BitmapAjaxCallback() {
 
+            BitmapAjaxCallback ajaxCallback = new BitmapAjaxCallback() {
                 @Override
                 protected void showProgress(boolean show) {
                     super.showProgress(true);
                 }
-
                 @Override
                 protected void callback(String url, ImageView iv, Bitmap bm, AjaxStatus status) {
                     super.callback(url, iv, bm, status);
@@ -73,15 +73,13 @@ public class NewsBannerPagerAdapter extends PagerAdapter {
             };
 
             ajaxCallback.url(categoriesEntries.get(position).getJSONObject("featured_image").optString("url"));
-
             ajaxCallback.memCache(true);
             ajaxCallback.fileCache(true);
             ajaxCallback.targetWidth(300);
-
             ajaxCallback.progress(progressBar);
-
             AQuery aQuery = new AQuery((Activity) context);
             aQuery.id(imageView).image(ajaxCallback);
+
         }else{
             progressBar.setVisibility(View.GONE);
         }
@@ -98,7 +96,9 @@ public class NewsBannerPagerAdapter extends PagerAdapter {
                 newsDetailsIntent.putExtra("description", categoriesEntries.get(position).getString("body"));
                 newsDetailsIntent.putExtra("creationTime", format.format(categoriesEntries.get(position).getCreateAt().getTime()));
 
-                if (categoriesEntries.get(position).getJSONObject("featured_image").optString("url") != null) {
+                JSONObject categoriesUrl = categoriesEntries.get(position).getJSONObject("featured_image");//.optString("url");
+                if (categoriesEntries.get(position).getJSONObject("featured_image") != null) {
+
                     newsDetailsIntent.putExtra("url", categoriesEntries.get(position).getJSONObject("featured_image").optString("url"));
                 }
                 context.startActivity(newsDetailsIntent);

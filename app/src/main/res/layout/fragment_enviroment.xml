@@ -15,20 +15,19 @@
         <android.support.v4.widget.SwipeRefreshLayout
             android:id="@+id/swipeView"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_weight="1.2"
+            android:layout_height="250sp"
             android:visibility="visible">
             <LinearLayout
                 android:id="@+id/selectContainer"
                 android:orientation="vertical"
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content"
+                android:layout_height="match_parent"
                 android:background="@color/primary_back">
 
                 <android.support.v4.view.ViewPager
                     android:id="@+id/topNewsViewPager"
                     android:layout_width="match_parent"
-                    android:layout_height="wrap_content" />
+                    android:layout_height="match_parent" />
 
             </LinearLayout>
         </android.support.v4.widget.SwipeRefreshLayout>
@@ -36,8 +35,7 @@
         <LinearLayout
             android:orientation="vertical"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_weight="0.8">
+            android:layout_height="wrap_content">
 
             <TextView
                 android:id="@+id/top_news_text"
